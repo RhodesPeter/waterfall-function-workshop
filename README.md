@@ -5,7 +5,8 @@ You have all seen the compose function. It allows you to take some functions,
 and compose them into a single function! What do you do if the functions are
 asynchronous? Implement the function waterfall, waterfall takes three arguments:
 <br>
-1. an initial argument, this is passed into the first async function in the waterfall.<br>
+
+1. an initial argument, this is passed into the first async function in the waterfall.
 
 2. the second argument is an array of functions, each function takes two arguments. The the first one it uses to find a result, the second is a callback function. These functions will get called one after the other by waterfall.<br>
 
