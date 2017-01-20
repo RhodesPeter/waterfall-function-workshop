@@ -1,1 +1,1 @@
-# waterfall-function-workshop
+# Waterfall Function Workshop
