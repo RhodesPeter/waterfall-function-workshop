@@ -3,15 +3,15 @@ This workshop has been inspired by @besarthoxhaj and his legendary waterfall fun
 
 You have all seen the compose function. It allows you to take some functions,
 and compose them into a single function! What do you do if the functions are
-asynchronous? Implement the function waterfall, waterfall takes three
+asynchronous? Implement the function waterfall, waterfall takes three arguments:
+<br>
+1. an initial argument, this is passed into the first async function in the waterfall.<br>
 
-arguments:
-1) an initial argument, this is passed into the first async function in the waterfall.
-2) the second argument is an array of functions, each function takes two arguments. The the first one it uses to find a result, the second is a callback function. These functions will get called one after the other by waterfall.
-3) a final callback is the third argument. This is called when waterfall has called the last function.
+2. the second argument is an array of functions, each function takes two arguments. The the first one it uses to find a result, the second is a callback function. These functions will get called one after the other by waterfall.<br>
 
-If that is all super confusing, look at the test below
+3. a final callback is the third argument. This is called when waterfall has called the last function. If that is all super confusing, look at the test below
 
+```
 var asyncAddOne = function(x, cb) {
   setTimeout(function() {
     if (typeof x !== 'number') return cb(new Error('need a number!'))
@@ -55,3 +55,4 @@ waterfall(3, [
   }
   console.log('Test 1 success!')
 })
+```
