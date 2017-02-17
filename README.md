@@ -1,6 +1,8 @@
 # Morning challenge: implement a waterfall function
 This workshop has been inspired by @besarthoxhaj and his legendary waterfall function workshop given to FAC9.
 
+A waterfall functoin "runs an array of functions in series, each passing their results to the next in the array."
+
 You have all seen the compose function. It allows you to take some functions,
 and compose them into a single function! What do you do if the functions are
 asynchronous? Implement the function waterfall, waterfall takes three arguments:
