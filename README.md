@@ -56,7 +56,7 @@ waterfall(3, [
 })
 ```
 
-Glossary:
+### Glossary:
 - [Error-first callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)
 - [Compose function](http://blakeembrey.com/articles/2014/01/compose-functions-javascript/)
 - [Asynchronous vs syncronus](http://rowanmanning.com/posts/javascript-for-beginners-async/)
