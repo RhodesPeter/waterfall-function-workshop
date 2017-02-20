@@ -1,7 +1,11 @@
 # Morning challenge: implement a waterfall function
 This workshop has been inspired by @besarthoxhaj and his legendary waterfall function workshop given to FAC9.
 
-You may have seen the compose function before. It allows you to take some functions and compose them into a single function! What do you do if the functions are asynchronous? Implement the waterfall function. 
+You may have seen the compose function before, it allows you to take some functions and compose them into a single function! 
+
+What do you do if the functions are asynchronous? You implement the waterfall function. 
+
+Like the compose function, the waterfall runs an array of functions in series, each passing their results to the next in the array. 
 
 The waterfall function takes three arguments:
 
@@ -10,6 +14,11 @@ The waterfall function takes three arguments:
 2) the second argument is an array of functions, each function takes two arguments. The the first one it uses to find a result, the second is a callback function. These functions will get called one after the other by waterfall.
 
 3) a final callback is the third argument. This is called when waterfall has called the last function.
+
+Workshop: 
+1. Copy the code below and past it into [Repl](https://repl.it/languages/javascript).
+2.
+3.
 
 ```
 function asyncAddOne(x, cb) {
