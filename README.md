@@ -25,26 +25,26 @@ function asyncAddOne(x, cb) {
   setTimeout(function() {
     if (typeof x !== 'number'){ return cb(new Error('need a number!')) }
     else { return cb(null, x + 1) }
-  }, 200)
+  }, 200);
 }
 
 function asyncDouble(x, cb) {
   setTimeout(function() {
     if (typeof x !== 'number') { return cb(new Error('need a number!')) }
     else { return cb(null, x * 2) }
-  }, 200)
+  }, 200);
 }
 
 function asyncTimesTen(x, cb) {
   setTimeout(function() {
     if (typeof x !== 'number') { return cb(new Error('need a number!')) }
     else { return cb(null, x * 10) }
-  }, 200)
+  }, 200);
 }
 
 // Implement this function!
 function waterfall(arg, tasks, cb) {
-  cb(new Error('waterfall function not implemented'))
+  cb(new Error('waterfall function not implemented'));
 }
 
 waterfall(3, [
@@ -54,15 +54,15 @@ waterfall(3, [
 ], function(error, result) {
      console.log('Test 1');
      if (error) {
-       console.log('test failed, ' + error)
+       console.log('test failed, ' + error);
      }
      else if (result !== 80) {
-       console.log('test failed, expected 80 but got', result)
+       console.log('test failed, expected 80 but got', result);
      }
      else {
-       console.log('Test 1 passed!')
+       console.log('Test 1 passed!');
      }
-})
+});
 ```
 
 ### Glossary:
