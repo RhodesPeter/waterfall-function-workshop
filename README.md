@@ -11,8 +11,6 @@ The waterfall function takes three arguments:
 
 3) a final callback is the third argument. This is called when waterfall has called the last function.
 
-If that is all super confusing, look at the test below
-
 ```
 var asyncAddOne = function(x, cb) {
   setTimeout(function() {
