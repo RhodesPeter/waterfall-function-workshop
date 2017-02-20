@@ -4,15 +4,15 @@ This workshop has been inspired by [Besart Hoxhaj](https://github.com/besarthoxh
 You may have seen the compose function before, it allows you to take some functions and compose them into a single function! 
 What do you do if the functions are asynchronous? You implement the waterfall function. 
 
-Like the compose function, the waterfall runs an array of functions in series, each passing their result to the next function in the array. Crucially, the waterfall function will not invoke the next function in the array until it has completed its own computation. 
+Like the compose function, the waterfall function runs an array of functions in series, each passing their result to the next function in the array. Crucially, the waterfall function will not invoke the next function in the array until it has completed its own computation. 
 
 The waterfall function takes three arguments:
 
 1) An initial argument, this is passed into the first async function in the waterfall.
 
-2) The second argument is an array of functions, each function takes two arguments. The the first one it uses to find a result, the second is a callback function. These functions will get called one after the other by waterfall.
+2) The second argument is an array of functions, each function takes two arguments. The first one it uses to find a result and the second is a callback function. These functions will get called one after the other by the waterfall.
 
-3) A final callback is the third argument. This is called when waterfall has called the last function.
+3) A final callback is given as the third argument. This is called after the waterfall has invoked the last function in the array.
 
 ### Workshop: 
 
