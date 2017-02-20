@@ -1,5 +1,5 @@
 # Morning challenge: implement a waterfall function
-This workshop has been inspired by @besarthoxhaj and his legendary waterfall function workshop given to FAC9.
+This workshop has been inspired by [Besart Hoxhaj](https://github.com/besarthoxhaj) and his legendary waterfall function workshop given to FAC9.
 
 You may have seen the compose function before, it allows you to take some functions and compose them into a single function! 
 
