@@ -9,7 +9,7 @@ Like the compose function, the waterfall function runs an array of functions in 
 ### Waterfall function:
 The waterfall function takes three arguments:
 
-1) An initial argument, this is passed into the first async function in the waterfall.
+1) An initial argument, this is passed into the first async function in the array.
 
 2) The second argument is an array of functions, each function takes two arguments. The first argument it uses to find a result (it's first argument) and the second is a callback function.
 
