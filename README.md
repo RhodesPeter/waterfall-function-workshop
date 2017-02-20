@@ -45,9 +45,24 @@ function asyncTimesTen(x, cb) {
   }, 200);
 }
 
-// Create this function!
+var count = 0;
 function waterfall(arg, tasks, cb) {
-  cb(new Error('waterfall function not implemented'));
+  if (tasks.length < 1){ 
+    return; 
+  }
+  else if (tasks[count] !== undefined) {
+    tasks[count](arg, function(error, result) {
+      count++
+      if (error) {
+        cb(error)
+      }
+      else {
+        waterfall(result, tasks, cb)
+      }
+    })
+    return;
+  }
+  cb(null, arg)
 }
 
 waterfall(3, [
