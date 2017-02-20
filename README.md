@@ -15,10 +15,10 @@ The waterfall function takes three arguments:
 
 3) a final callback is the third argument. This is called when waterfall has called the last function.
 
-Workshop: 
-1. Copy the code below and past it into [Repl](https://repl.it/languages/javascript).
-2.
-3.
+### Workshop: 
+1) Copy the code below and paste it into [Repl](https://repl.it/languages/javascript).
+2) Create the waterfall function!
+3)
 
 ```
 function asyncAddOne(x, cb) {
@@ -43,7 +43,7 @@ function asyncTimesTen(x, cb) {
 }
 
 // Implement this function!
-var waterfall = function(arg, tasks, cb) {
+function waterfall(arg, tasks, cb) {
   cb(new Error('waterfall function not implemented'))
 }
 
