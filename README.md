@@ -19,7 +19,7 @@ The waterfall function takes three arguments:
 
 1) Copy the code below and paste it into [Repl](https://repl.it/languages/javascript).
 
-2) Create the waterfall function to pass the test. 
+2) Create the waterfall function to pass the tests. 
 
 3) For bonus points, create some additional tests for the waterfall function.
 
@@ -45,7 +45,7 @@ function asyncTimesTen(x, cb) {
   }, 200);
 }
 
-// Implement this function!
+// Create this function!
 function waterfall(arg, tasks, cb) {
   cb(new Error('waterfall function not implemented'));
 }
