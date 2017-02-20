@@ -6,8 +6,6 @@ What do you do if the functions are asynchronous? You implement the waterfall fu
 
 Like the compose function, the waterfall function runs an array of functions in series, each passing their result to the next function in the array. Crucially, the waterfall function will not invoke the next function in the array until the current function being run has been returned. 
 
--
-
 The waterfall function takes three arguments:
 
 1) An initial argument, this is passed into the first async function in the waterfall.
