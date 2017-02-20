@@ -48,7 +48,7 @@ waterfall(3, [
     console.log('test failed, ' + error)
   }
   else if (result !== 80) {
-    console.log('test failed, expected 3 but got', result)
+    console.log('test failed, expected 80 but got', result)
   }
   else {
     console.log('Test 1 passed!')
