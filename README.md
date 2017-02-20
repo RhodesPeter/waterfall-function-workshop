@@ -9,11 +9,11 @@ Like the compose function, the waterfall runs an array of functions in series, e
 
 The waterfall function takes three arguments:
 
-1) an initial argument, this is passed into the first async function in the waterfall.
+1) An initial argument, this is passed into the first async function in the waterfall.
 
-2) the second argument is an array of functions, each function takes two arguments. The the first one it uses to find a result, the second is a callback function. These functions will get called one after the other by waterfall.
+2) The second argument is an array of functions, each function takes two arguments. The the first one it uses to find a result, the second is a callback function. These functions will get called one after the other by waterfall.
 
-3) a final callback is the third argument. This is called when waterfall has called the last function.
+3) A final callback is the third argument. This is called when waterfall has called the last function.
 
 ### Workshop: 
 
