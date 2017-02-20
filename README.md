@@ -5,7 +5,7 @@ You may have seen the compose function before, it allows you to take some functi
 
 What do you do if the functions are asynchronous? You implement the waterfall function. 
 
-Like the compose function, the waterfall runs an array of functions in series, each passing their results to the next in the array. 
+Like the compose function, the waterfall runs an array of functions in series, each passing their result to the next function in the array. 
 
 The waterfall function takes three arguments:
 1) an initial argument, this is passed into the first async function in the waterfall.
