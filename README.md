@@ -12,26 +12,24 @@ The waterfall function takes three arguments:
 3) a final callback is the third argument. This is called when waterfall has called the last function.
 
 ```
-var asyncAddOne = function(x, cb) {
+function asyncAddOne(x, cb) {
   setTimeout(function() {
-    if (typeof x !== 'number') return cb(new Error('need a number!'))
-    return cb(null, x + 2)
+    if (typeof x !== 'number'){ return cb(new Error('need a number!')) }
+    else { return cb(null, x + 1) }
   }, 200)
 }
 
-var asyncDouble = function(x, cb) {
+function asyncDouble(x, cb) {
   setTimeout(function() {
-    if (typeof x !== 'number') return cb(new Error('need a number!'))
-    return cb(null, x*2)
+    if (typeof x !== 'number') { return cb(new Error('need a number!')) }
+    else { return cb(null, x * 2) }
   }, 200)
 }
 
-var asyncModSeven = function(x, cb) {
-  // mod takes the remainder after division.
-  // ie 5 mod 3 === 2 (5/3 === 1 remainder 2)
+function asyncTimesTen(x, cb) {
   setTimeout(function() {
-    if (typeof x !== 'number') return cb(new Error('need a number!'))
-    return cb(null, x % 7)
+    if (typeof x !== 'number') { return cb(new Error('need a number!')) }
+    else { return cb(null, x * 10) }
   }, 200)
 }
 
@@ -43,16 +41,17 @@ var waterfall = function(arg, tasks, cb) {
 waterfall(3, [
   asyncAddOne,
   asyncDouble,
-  asyncModSeven
+  asyncTimesTen
 ], function(error, result) {
   console.log('Test 1');
   if (error) {
-    throw new Error('test failed with error: ' + error)
+    console.log('test failed, ' + error)
   }
-  if (result !== 3) {
-    throw new Error('test failed, expected 3 but got ' + result)
-    return ;
+  else if (result !== 80) {
+    console.log('test failed, expected 3 but got', result)
   }
-  console.log('Test 1 success!')
+  else {
+    console.log('Test 1 passed!')
+  }
 })
 ```
