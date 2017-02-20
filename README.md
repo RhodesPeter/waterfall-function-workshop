@@ -8,6 +8,7 @@ What do you do if the functions are asynchronous? You implement the waterfall fu
 Like the compose function, the waterfall runs an array of functions in series, each passing their result to the next function in the array. 
 
 The waterfall function takes three arguments:
+
 1) an initial argument, this is passed into the first async function in the waterfall.
 
 2) the second argument is an array of functions, each function takes two arguments. The the first one it uses to find a result, the second is a callback function. These functions will get called one after the other by waterfall.
@@ -15,6 +16,7 @@ The waterfall function takes three arguments:
 3) a final callback is the third argument. This is called when waterfall has called the last function.
 
 ### Workshop: 
+
 1) Copy the code below and paste it into [Repl](https://repl.it/languages/javascript).
 
 2) Create the waterfall function to pass the test. 
