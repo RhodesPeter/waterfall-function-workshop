@@ -11,7 +11,7 @@ The waterfall function takes three arguments:
 
 1) An initial argument, this is passed into the first async function in the waterfall.
 
-2) The second argument is an array of functions, each function takes two arguments. The first argument it uses to find a result (it's first argument) and the second is a callback function.
+2) The second argument is an array of functions, each function takes two arguments. The first argument it uses to find a result and the second is a callback function.
 
 3) A final callback is given as the third argument. This is called after the waterfall has invoked the last function in the array.
 
