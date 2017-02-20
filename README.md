@@ -13,7 +13,7 @@ The waterfall function takes three arguments:
 
 2) The second argument is an array of functions, each function takes two arguments. The first argument it uses to find a result and the second is a callback function.
 
-3) A final callback is given as the third argument. This is called after the waterfall has invoked the last function in the array.
+3) A final callback is given as the third argument. This is called after the waterfall has invoked all of the functions in the array.
 
 ### Workshop: 
 
