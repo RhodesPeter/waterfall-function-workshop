@@ -19,7 +19,7 @@ The waterfall function takes three arguments:
 
 1) Copy the code below and paste it into [Repl](https://repl.it/languages/javascript).
 
-2) Create the waterfall function to pass the tests. 
+2) Create the waterfall function, pass the tests. 
 
 3) For bonus points, create some additional tests for the waterfall function.
 
