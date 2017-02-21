@@ -45,14 +45,10 @@ function asyncTimesTen(x, cb) {
   }, 200);
 }
 
-var count = 0;
 function waterfall(arg, tasks, cb) {
-  if (tasks.length < 1){ 
-    return; 
-  }
-  else if (tasks[count] !== undefined) {
-    tasks[count](arg, function(error, result) {
-      count++
+   if (tasks[0] !== undefined) {
+    tasks[0](arg, function(error, result) {
+      tasks.shift();
       if (error) {
         cb(error)
       }
