@@ -72,3 +72,4 @@ waterfall(3, [
 - [Error-first callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)
 - [Compose function](http://blakeembrey.com/articles/2014/01/compose-functions-javascript/)
 - [Synchronous vs. Asynchronous](http://rowanmanning.com/posts/javascript-for-beginners-async/)
+- [setTimeout()](https://www.w3schools.com/jsref/met_win_settimeout.asp)
