@@ -1,5 +1,5 @@
 # Morning challenge: implement a waterfall function
-This workshop has been inspired by [Besart Hoxhaj](https://github.com/besarthoxhaj) and his legendary waterfall function workshop given to FAC9.
+This workshop has been inspired by [Eoin McCarthy](https://github.com/des-des) and his legendary waterfall function workshop given to FAC9 by [Besart Hoxhaj](https://github.com/besarthoxhaj).
 
 You may have seen the compose function before, it allows you to take some functions and compose them into a single function! 
 What do you do if the functions are asynchronous? You implement the waterfall function. 
@@ -46,19 +46,15 @@ function asyncTimesTen(x, callBack) {
 }
 
 function waterfall(arg, tasks, cb) {
-   if (tasks[0] !== undefined) {
-    tasks[0](arg, function(error, result) {
-      tasks.shift();
-      if (error) {
-        cb(error)
-      }
-      else {
-        waterfall(result, tasks, cb)
-      }
-    })
-    return;
-  }
-  cb(null, arg)
+    if(tasks.length === 0){
+      return cb(null, arg)
+    }
+    tasks[0](arg, function(err, arg){
+        if (err){
+          return cb(err)
+        }
+        return waterfall(arg, tasks.slice(1), cb) 
+    });
 }
 
 waterfall(3, [
