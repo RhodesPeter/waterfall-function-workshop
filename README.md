@@ -24,25 +24,25 @@ The waterfall function takes three arguments:
 3) For bonus points, create some additional tests for the waterfall function.
 
 ```
-function asyncAddOne(x, cb) {
+function asyncAddOne(x, callBack) {
   setTimeout(function() {
-    if (typeof x !== 'number'){ return cb(new Error('need a number!')) }
-    else { return cb(null, x + 1) }
-  }, 200);
+    if (typeof x !== 'number'){ return callBack(new Error('need a number!')) }
+    else { return callBack(null, x + 1) }
+  }, 200)
 }
 
-function asyncDouble(x, cb) {
+function asyncDouble(x, callBack) {
   setTimeout(function() {
-    if (typeof x !== 'number') { return cb(new Error('need a number!')) }
-    else { return cb(null, x * 2) }
-  }, 200);
+    if (typeof x !== 'number') { return callBack(new Error('need a number!')) }
+    else { return callBack(null, x * 2) }
+  }, 200)
 }
 
-function asyncTimesTen(x, cb) {
+function asyncTimesTen(x, callBack) {
   setTimeout(function() {
-    if (typeof x !== 'number') { return cb(new Error('need a number!')) }
-    else { return cb(null, x * 10) }
-  }, 200);
+    if (typeof x !== 'number') { return callBack(new Error('need a number!')) }
+    else { return callBack(null, x * 10) }
+  }, 200)
 }
 
 function waterfall(arg, tasks, cb) {
@@ -66,17 +66,17 @@ waterfall(3, [
   asyncDouble,
   asyncTimesTen
 ], function(error, result) {
-     console.log('Test 1');
-     if (error) {
-       console.log('test failed, ' + error);
-     }
-     else if (result !== 80) {
-       console.log('test failed, expected 80 but got', result);
-     }
-     else {
-       console.log('Test 1 passed!');
-     }
-});
+  console.log('Test 1');
+  if (error) {
+    console.log('test failed, ' + error)
+  }
+  else if (result !== 80) {
+    console.log('test failed, expected 80 but got', result)
+  }
+  else {
+    console.log('Test 1 passed!')
+  }
+})
 ```
 
 ### Glossary:
